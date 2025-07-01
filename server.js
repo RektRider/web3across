@@ -1,14 +1,14 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-// Middleware to parse JSON and form data
+// Middleware to parse incoming JSON
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Serve static files like index.html
+// Serve static frontend files (e.g. index.html, CSS, JS) from "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Handle form POST submission
