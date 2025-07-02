@@ -5,16 +5,8 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-<<<<<<< HEAD
-// Middleware to parse incoming JSON
-=======
->>>>>>> f41ea54 (Updated form email logic and minor HTML changes)
 app.use(express.json());
 
-<<<<<<< HEAD
-// Serve static frontend files (e.g. index.html, CSS, JS) from "public" folder
-=======
->>>>>>> f41ea54 (Updated form email logic and minor HTML changes)
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/submit-form', async (req, res) => {
