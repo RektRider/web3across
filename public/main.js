@@ -261,3 +261,11 @@ const contactObserver = new IntersectionObserver((entries) => {
 if (contactSection) {
   contactObserver.observe(contactSection);
 }
+
+// Scrollable Animation for Header logo
+document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

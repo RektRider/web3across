@@ -59,6 +59,8 @@ header {
   height: 24px;
   width: auto;
   padding-left: 20px;
+  cursor: pointer;
+  user-select: none;
 }
 
 /* === MENU TOGGLE === */
@@ -2298,4 +2300,33 @@ header {
   to {
     box-shadow: 0 0 14px rgba(0, 240, 212, 0.6);
   }
+}
+
+.telegram-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #0088cc;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.telegram-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.telegram-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
 }
